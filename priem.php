@@ -1,9 +1,10 @@
 <?
 // ----------------------------конфигурация-------------------------- //
 
-$adminemail="paveldenysov@gmail.com, 2kie.co@gmail.com";  // e-mail админа
+$adminemail="eleven.krsk@gmail.com, liferenko@etlgr.com
+";  // e-mail админа
 
-$email="paveldenysov@gmail.com, 2kie.co@gmail.com"; // почта пользователя по умолчанию
+$email="eleven.krsk@gmail.com"; // почта пользователя по умолчанию
 
 $date=date("d.m.y"); // число.месяц.год
 
@@ -26,19 +27,20 @@ $name=$_POST['lead_name'];
 $message=$_POST['lead_text'];
 
 $msg="
-Я у вас на сайте. Хочу стать вашим клиентом.
+Я у вас на сайте. Интересует проекционная система.
 
-Имя компании: $name
+Наш продукт: $name
 Телефон: $phone
 
 ---
+форма приём
 ";
 
 
 
  // Отправляем письмо админу
 
-mail("$adminemail", "$date $time [Заявка DeLife АБК1] $name на $message ", "$msg");
+mail("$adminemail", "$date $time [Заявка PJ Image Прием] $name на $message ", "$msg");
 
 
 
@@ -46,7 +48,7 @@ mail("$adminemail", "$date $time [Заявка DeLife АБК1] $name на $messa
 
 $f = fopen("message.txt", "a+");
 
-fwrite($f," \n $date $time Заявка с формы 'АБК1' от $phone");
+fwrite($f," \n $date $time Заявка с формы 1 от $phone");
 
 fwrite($f,"\n $msg ");
 
